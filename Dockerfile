@@ -1,6 +1,6 @@
 FROM php:7.0.7-apache
-apt-get clean
-apt-get update
+RUN apt-get clean
+RUN apt-get update
 # Utiliser les dépôts d'archive pour Jessie
 RUN echo "deb [trusted=yes] http://archive.debian.org/debian jessie main\ndeb-src [trusted=yes] http://archive.debian.org/debian jessie main" > /etc/apt/sources.list
 
