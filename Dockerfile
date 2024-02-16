@@ -1,8 +1,12 @@
 FROM php:7.0.7-apache
 
 # Utiliser les dépôts d'archive pour Jessie
-RUN echo "deb [trusted=yes] http://archive.debian.org/debian jessie main\ndeb-src [trusted=yes] http://archive.debian.org/debian jessie main" > /etc/apt/sources.list && \
-    apt-get update --allow-releaseinfo-change && apt-get -y install wget libjansson4 libhiredis0.10
+RUN echo "deb [trusted=yes] http://archive.debian.org/debian jessie main\ndeb-src [trusted=yes] http://archive.debian.org/debian jessie main" > /etc/apt/sources.list
+
+RUN apt-get update --allow-releaseinfo-change
+
+RUN apt-get -y install wget libjansson4 libhiredis0.10
+
 
 
 
